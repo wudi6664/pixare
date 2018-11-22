@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}Pixare - 分享精彩生活{% endblock %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="alternate icon" type="image/png" href="/static/i/favicon.png"/>
+    <link rel="stylesheet" href="/static/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/static/css/admin.css"/>
+    <link rel="stylesheet" href="/static/css/app.css"/>
+
+    <style>
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+
+        .header a {
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer p {
+          color: #7f8c8d;
+          margin: 0;
+          padding: 15px 0;
+          text-align: center;
+          background: #2d3e50;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+        <a href="/">Pixare</a>
+        <!--<a href="/"><img src='/static/images/logo.png' width="100"/></a>-->
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="/explore">探索</a></li>
+        <li><a href="#">发布</a></li>
+        <li><a href="#">个人主页</a></li>
+
+          <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          菜单 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li class="am-dropdown-header">标题</li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">关于字体</a></li>
+          <li><a href="#">TIPS</a></li>
+        </ul>
+      </li>
+
+      </ul>
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
+      </div>
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+      </div>
+
+
+        <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search">
+          <div class="am-form-group">
+            <input type="text" class="am-form-field am-input-sm" placeholder="搜索照片">
+          </div>
+          <button type="submit" class="am-btn am-btn-default am-btn-sm">搜索</button>
+        </form>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="content">
+<div style="height:1px;"></div>
+{% block content %}{% endblock %}
+</div>
+
+<footer class="footer">
+  <p>© 2018 Proudly designed by the PixarePaddleWater Team.</p>
+</footer>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/amazeui.min.js"></script>
+</body>
+</html>
