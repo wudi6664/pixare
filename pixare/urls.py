@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from pixare.views.home import login
+from pixare.views.home import register
 from . import views
 
 urlpatterns = [
@@ -22,5 +24,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home.index),
     url(r'^explore/',views.explore.news),
-    # url(r'', include('blog.urls')),
+    url(r'^login/', views.home.login, name='log'),
+    url(r'^register/', views.home.register, name='reg'),
 ]
